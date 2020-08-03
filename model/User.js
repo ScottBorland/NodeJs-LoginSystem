@@ -26,6 +26,10 @@ const userSchema = new mongoose.Schema({
     apiKey: {
         type: String,
         default: null
+    },
+    apiRequests: {
+        type: Number,
+        default: 0
     }
 });
 
