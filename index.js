@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require('dotenv');
 const cors = require('cors');
 const mongoose = require('mongoose');
+var PORT = process.env.PORT || 5000;
 
 app.use(cors());
 //Import Routes
@@ -26,6 +27,6 @@ app.use(express.json());
 app.use('/api/user', authRoute);
 app.use('/api/posts', postRoute);
 
-app.listen(3000, () => console.log('Server up and running'));
+app.listen(PORT, () => console.log('Server up and running'));
 
 
